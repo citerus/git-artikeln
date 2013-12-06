@@ -1,0 +1,6 @@
+Våra bästa Git-tips
+
+Bland Citerus konsulter finns många entusiastiska Git-användare. I denna artikel delar vi med oss av våra bästa tips och tricks för att få maximal användning av Git:s dolda kraft i ditt dagliga arbete.
+
+Ola Rende: git config --local alias.<kommandoförkortning> <kommando>
+(beskrivande text här) 
