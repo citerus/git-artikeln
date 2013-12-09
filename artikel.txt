@@ -4,3 +4,8 @@ Bland Citerus konsulter finns många entusiastiska Git-användare. I denna artikel
 
 Ola Rende: git config --local alias.<kommandoförkortning> <kommando>
 (beskrivande text här) 
+
+[alias]
+lg = log --graph --color --all --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+
+co = !sh -c 'git checkout $1 && git submodule update --init --recursive && git submodule init' -
