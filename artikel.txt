@@ -4,3 +4,29 @@ Bland Citerus konsulter finns många entusiastiska Git-användare. I denna artikel
 
 Ola Rende: git config --local alias.<kommandoförkortning> <kommando>
 (beskrivande text här) 
+
+Magnus Olsson:
+Stoppa in följande rader i din ~/.gitconfig
+[alias]
+lg = log --graph --color --all --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+co = !sh -c 'git checkout $1 && git submodule update --init --recursive && git submodule init' -
+
+Q/A
+
+Q: Hur bakar jag in ytterligare ändringar i den senaste kommitten eller bara ändrar på komittmeddelandet?
+A: git commit -a --amend
+
+Q: Hur tar jag bort allt som inte redan är kommittat?
+A: git reset --hard
+
+Q: Hur ångrar jag den där komitten jag gjorde igår?
+A: git revert <SHA-ID>
+
+Q: Hur hämtar jag de senaste ändringarna utan att behöva merga och först behöva göra kommitt och sedan pull.
+A: git fetch
+
+Q: Hjälp! Jag har lyckats supa bort några changesets och de syns inte i grafloggen! :'-( Finns det något sätt att hitta de?
+A: git reflog
+
+Q: Hur kan jag merga mina ändringar med det senaste utan att skapa en sån där skräpande mergekommitt?
+A: git pull --rebase alternativt git rebase om du redan har ändringarna lokalt
